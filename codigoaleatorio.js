@@ -1,10 +1,10 @@
 
 //Gerar codigo aleatorio
   
-function randomCodigo(params, valor) {
+function randomCodigo(qtd, valor) {
   var random = '';
   var valores  = valor;
-    for (var i = 0; i < params; i++) {
+    for (var i = 0; i < qtd; i++) {
         random += valores.charAt(Math.floor(Math.random() * valores.length));
     }
   
