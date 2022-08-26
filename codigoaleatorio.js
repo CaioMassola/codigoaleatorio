@@ -1,7 +1,7 @@
 function randomCode(amount,  params) {
   var random = '';
     for (var i = 0; i < amount; i++) {
-        random += params.charAt(Math.floor(Math.random() *          params.length));
+        random += params.charAt(Math.floor(Math.random()*params.length));
     }
   
   return random;
