@@ -1,25 +1,21 @@
-
-//Gerar codigo aleatorio
-  
-function randomCodigo(qtd, valor) {
+function randomCode(amount,  params) {
   var random = '';
-  var valores  = valor;
-    for (var i = 0; i < qtd; i++) {
-        random += valores.charAt(Math.floor(Math.random() * valores.length));
+    for (var i = 0; i < amount; i++) {
+        random += params.charAt(Math.floor(Math.random() *          params.length));
     }
   
   return random;
 }
 
-function gerarCodigo() {
+function generateCode() {
   
-  var uppercase = randomCodigo(2, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-  var numeros = randomCodigo(4, '0123456789')
-  var simbolo = randomCodigo(1, '@#$%&')
-  var aux_uppercase = randomCodigo(2, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-  var lowercase = randomCodigo(2,'abcdefghijklmnopqrstuvwxyz')
-  var codigo = uppercase.concat(numeros,simbolo,aux_uppercase, lowercase)
+  var uppercase = randomCode(2, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+  var numbers = randomCode(4, '0123456789')
+  var symbol = randomCode(1, '@#$%&!^*')
+  var uppercaseSecond = randomCode(2, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+  var lowercase = randomCode(2,'abcdefghijklmnopqrstuvwxyz')
+  var code = uppercase.concat(numbers,symbol,uppercaseSecond, lowercase)
 
-  return codigo
+  return code
 }
-console.log(gerarCodigo())
+console.log(generateCode())
